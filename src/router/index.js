@@ -1,27 +1,29 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import AntDesign from '@/views/AntDesign.vue'
+import Axios from '@/views/Axios.vue'
 
-import HelloWorld from '@/components/HelloWorld.vue'
-import Left from '@/components/Left.vue'
-import Right from '@/components/Right.vue'
-import Tab1 from '@/components/tabs/tab1.vue'
-import Tab2 from '@/components/tabs/tab2.vue'
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/antdesign',
+    name: 'Ant-Design',
+    component: AntDesign
+  },
+  {
+    path: '/axios',
+    name: 'Axios',
+    component: Axios
+  }
+]
 
-Vue.use(VueRouter)
-
-export default new VueRouter({
-  routes: [
-    { path: '/', redirect: '/index'},
-    { path: '/index', component: HelloWorld },
-    { path: '/Left', component: Left },
-    {
-      path: '/Right',
-      component: Right,
-      redirect: '/Right/Tab1',
-      children: [
-        { path: 'Tab1', component: Tab1 },
-        { path: 'Tab2', component: Tab2 }
-      ]
-    }
-  ]
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
 })
+
+export default router
