@@ -3,13 +3,13 @@
   <h3>{{ msg }}</h3>
   <p>The cli has helped you install the following modules:</p>
   <ul>
-    <li><a target="_blank" href="https://github.com/vuejs/router">router</a></li>
-    <li><a target="_blank" href="https://github.com/vuejs/vuex">vuex</a></li>
-    <li><a target="_blank" href="https://github.com/axios/axios">axios</a></li>
+    <li><a target="_blank" href="https://github.com/vuejs/router">Router</a></li>
+    <li><a target="_blank" href="https://github.com/vuejs/vuex">Vuex</a></li>
+    <li><a target="_blank" href="https://github.com/axios/axios">Axios</a></li>
     <li><a target="_blank" href="https://www.antdv.com/docs/vue/getting-started-cn">Ant-Design</a></li>
   </ul>
   <p>You can view the corresponding functions on the router page</p>
-  <p>Author: <a target="_blank" href="https://github.com/ox4f5da2">Karl_fang</a></p>
+  <p>Author: <a target="_blank" href="https://github.com/ox4f5da2"><strong>Karl_fang</strong></a></p>
   <p>CLI Version: <strong>1.0.0</strong></p>
   <p>Date: <strong>2022-07-14</strong></p>
   <footer>Copyright © 2022 Karl_fang All Rights Reserved.</footer>

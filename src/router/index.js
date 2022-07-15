@@ -11,7 +11,7 @@ const routes = [
   },
   {
     path: '/antdesign',
-    name: 'Ant-Design',
+    name: 'AntDesign',
     component: AntDesign
   },
   {

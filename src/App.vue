@@ -1,10 +1,15 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/antdesign">Ant-Design</router-link> |
+    <router-link to="/antdesign">AntDesign</router-link> |
     <router-link to="/axios">Axios</router-link>
+    
+    <router-view v-slot="{ Component }">
+      <keep-alive include="Axios">
+        <component :is="Component" />
+      </keep-alive>
+    </router-view>
   </div>
-  <router-view/>
 </template>
 
 <style lang="less">
@@ -25,6 +30,16 @@
 
     &.router-link-exact-active {
       color: #42b983;
+    }
+  }
+
+  .home {
+    a {
+      color: #42b983;
+    }
+
+    a:hover {
+      color: #1890ff;
     }
   }
 }

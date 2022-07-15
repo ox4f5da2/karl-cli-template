@@ -37,6 +37,7 @@ import { message } from 'ant-design-vue';
 import { EditTwoTone, InfoCircleOutlined } from '@ant-design/icons-vue';
 
 export default {
+  name: 'Axios',
   components: {
     EditTwoTone,
     InfoCircleOutlined,
@@ -91,7 +92,7 @@ export default {
   margin: 20px auto;
 }
 
-.myTable >>> .ant-table tbody tr.table-striped{
+.myTable :deep(.ant-table tbody tr.table-striped){
   background-color: #fafafa;
 }
 </style>
