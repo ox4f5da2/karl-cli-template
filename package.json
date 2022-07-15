@@ -1,0 +1,24 @@
+{
+  "name": "chrome_plugins_doc",
+  "version": "1.0.0",
+  "description": "This is the instruction document of chrome plugins",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash ./deploy.sh"
+  },
+  "keywords": [
+    "chrome",
+    "plugins",
+    "instruction"
+  ],
+  "author": "Karl_fang",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  },
+  "dependencies": {
+    "vue": "^2.7.0"
+  }
+}
