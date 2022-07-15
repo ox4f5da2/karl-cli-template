@@ -17,6 +17,9 @@
         </a-timeline-item>
       </a-timeline>
     </div>
+    <footer>
+      scroll to see more timeline content
+    </footer>
   </div>
 </template>
 
@@ -53,8 +56,11 @@ export default {
 
 <style scoped>
 .timeLine {
-  width: 20%;
+  width: 25%;
   margin: 20px auto;
+  padding: 10px;
+  max-height: 450px;
+  overflow-y: scroll;
 }
 
 .timeLine  :deep(.ant-timeline-item-content) {

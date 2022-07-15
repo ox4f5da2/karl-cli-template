@@ -1,13 +1,13 @@
 <template>
   <div class="axios">
-    <h1>This is an Ant-Design Page</h1>
+    <h1>This is an Axios Page</h1>
     <div class="myInput">
       <a-input v-model:value="wd" placeholder="Basic usage">
         <template #prefix>
           <edit-two-tone />
         </template>
         <template #suffix>
-          <a-tooltip title="百度引擎搜索">
+          <a-tooltip title="Baidu Search Engine">
             <info-circle-outlined style="color: rgba(0, 0, 0, 0.45)" />
           </a-tooltip>
         </template>
@@ -60,22 +60,22 @@ export default {
       }],
       ifLoading: false,
       wd: 'chrome',
-      btnText: '发起Axios请求'
+      btnText: 'Send Axios Request'
     }
   },
   methods: {
     async getResult() {
       const params = { word: this.wd };
       this.ifLoading = true;
-      this.btnText = '发起请求中...'
+      this.btnText = 'Requesting...'
       const { data } = await apiExample(params, this.callback);
       this.data = JSON.parse(data)?.g;
     },
     callback(status) {
       // status: 成功返回SUCCESS, 失败返回FAIL
       this.ifLoading = false;
-      this.btnText = '发起Axios请求';
-      status === "SUCCESS" ? message.success('请求成功!') : message.error('请求失败!');
+      this.btnText = 'Send Axios Request';
+      status === "SUCCESS" ? message.success('Get results successfully!') : message.error('Failed to get results!');
     }
   }
 }
