@@ -4,7 +4,7 @@
   "description": "This is the instruction document of chrome plugins",
   "main": "index.js",
   "scripts": {
-    "serve": "vuepress dev docs",
+    "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "bash ./deploy.sh"
   },
