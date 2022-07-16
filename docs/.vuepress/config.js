@@ -2,8 +2,14 @@ module.exports = {
   title: "karl-cli",
   description: "vuepress-template",
   base: "/", 
+  head: [
+    [
+      'link', { rel: 'icon', href: '/images/common/logo.png' }
+    ]
+  ],
   themeConfig: {
     sidebarDepth: 2,
+    logo: '/images/common/logo.png', 
     nav: [
       { text: 'Home', link: '/' },
       {
