@@ -4,11 +4,13 @@ module.exports = {
   base: "/", 
   head: [
     [
+      // 这里是网页的小图标，href填写自己的logo的路径
       'link', { rel: 'icon', href: '/images/common/logo.png' }
     ]
   ],
   themeConfig: {
     sidebarDepth: 2,
+    // 这里是侧边栏的图标，填写自己的logo的路径
     logo: '/images/common/logo.png', 
     nav: [
       { text: 'Home', link: '/' },
