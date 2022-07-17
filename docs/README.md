@@ -1,80 +1,14 @@
-# READEME
-
-[[toc]]
-
-## 简单介绍
-
-This is the **vuepress-template** provided by *karl-cli*
-
-::: danger 警告
-**karl-cli**所提供的命令：`karl addcpn Hello -P(--path) /src/components/Hello`这个命令不能在**vuepress**中使用，剩余命令均可。
-
-同时，在**public/images/common**文件夹下的`*.svg`文件都不能删除，除非删除了对应的组件
-:::
-
-::: tip 
-如果想要知道如何进行自己脚手架工具的开发可以点击[这里]()
-:::
-
-## vuepress-template模板功能
-
-### Banner
-使用方法如下：
-``` vue
-<Banner :imgList="[
-  { id: 0, src: '/images/common/1.png', name: '1.png' },
-  { id: 1, src: '/images/common/2.png', name: '2.png' },
-  { id: 2, src: '/images/common/3.png', name: '3.png' },
-  { id: 3, src: '/images/common/4.png', name: '4.png' },
-]" />
-```
-
-效果如下：
-
-<Banner :imgList="[
-  { id: 0, src: '/images/common/img1.png', name: 'img1.png' },
-  { id: 1, src: '/images/common/img2.png', name: 'img2.png' },
-  { id: 2, src: '/images/common/img3.png', name: 'img3.png' },
-  { id: 3, src: '/images/common/img4.png', name: 'img4.png' },
-]" />
-
-
-### Device
-使用方法如下：
-``` vue
-<Device />
-```
-
-效果如下：
-
-<Device />
-
-### Example
-使用方法如下：
-``` vue
-<Example src="/video/1.mp4"/>
-```
-
-效果如下：
-
-<Example src="/video/1.mp4"/>
-
-### Icon
-使用方法如下：
-``` vue
-<Icon src="right.png" />
-```
-
-效果如下：
-
-<Icon src="right.png" />
-
-### Picture
-使用方法如下：
-``` vue
-<Picture src="/images/common/img1.png" title="图片的title" :scale="0.8" />
-```
-
-效果如下：
-
-<Picture src="/images/common/img1.png" title="图片的title" :scale="0.8" />
+---
+home: true
+heroImage: /images/common/logo.png
+actionText: 起步 →
+actionLink: /模板介绍
+features:
+- title: 简单易上手
+  details: vuepress-template已经在vuepress的基础上帮您构建了一个简单的模板，并且附送一个vuepress快速上手的说明文档
+- title: 提供Vue组件
+  details: 在原来vuepress提供的Vue组件的基础上还提供了额外5个实用的组件(Banner、Device、Example、Icon、Picture、BackTop)
+- title: 体验丰富
+  details: 如果您想要给用户提供一个较好的观看使用体验，那么就可以使用所提供可爱的Emoji、好看的表格图片以及快速返回顶部等组件。
+footer: MIT Licensed | Copyright © Karl_fang 2022 All Rights Reserved.
+---

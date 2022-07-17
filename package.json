@@ -1,7 +1,7 @@
 {
   "name": "vuepress-template",
   "version": "1.0.0",
-  "description": "This is a template provided by karl-cli",
+  "description": "This is the instruction document of chrome plugins",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
