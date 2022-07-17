@@ -1,7 +1,7 @@
 {
-  "name": "chrome_plugins_doc",
+  "name": "vuepress-template",
   "version": "1.0.0",
-  "description": "This is the instruction document of chrome plugins",
+  "description": "This is a template provided by karl-cli",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
@@ -15,10 +15,9 @@
   ],
   "author": "Karl_fang",
   "license": "ISC",
-  "devDependencies": {
-    "vuepress": "^1.9.7"
-  },
   "dependencies": {
-    "vue": "^2.7.0"
+    "vue": "^2.7.0",
+    "vuepress": "^1.9.7",
+    "vue-template-compiler": "^2.6.10"
   }
 }
