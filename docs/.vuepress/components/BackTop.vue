@@ -1,5 +1,5 @@
 <template>
-  <div class="backTop">
+  <div class="backTop" ref="backtop">
     <section :class="{ show: rocketFlag }" class="rocket" @click="rocket">
       <img :src="$withBase('/images/common/rocket.svg')" alt="返回顶部" title="返回顶部">
     </section>
@@ -8,27 +8,15 @@
 
 <script>
 export default {
-  props: {
-    el: {
-      type: String,
-      require: true
-    }
-  },
   mounted() {
     this.interSectionObserver = new IntersectionObserver(this.handler, this.options);
-    const observeEl = document.querySelector(`#_${this.hookTitle}`)
-      || document.querySelector(`#${this.hookTitle}`);
-    this.interSectionObserver.observe(observeEl);
-  },
-  updated() {
-    
+    this.interSectionObserver.observe(this.$refs.backtop);
   },
   data() {
     return {
       rocketFlag: false,
       interSectionObserver: null,
-      options: { threshold: 0 },
-      hookTitle: this.elProcess(this.el)
+      options: { threshold: 0 }
     }
   },
   methods: {
@@ -51,9 +39,6 @@ export default {
     },
     rocket() {
       window.requestAnimationFrame(this.step);
-    },
-    elProcess(el) {
-      return `${el.replaceAll(".", "-").toLowerCase()}`;
     }
   }
 }
