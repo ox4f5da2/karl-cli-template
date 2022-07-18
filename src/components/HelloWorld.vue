@@ -24,7 +24,7 @@
   <p>The following is other supplementary instructions about the project</p>
   <p>CLI-Version: <strong>1.0.0</strong></p>
   <p>Date: <strong>2022-07-18</strong></p>
-  <p>Document: <a target="_blank" href=""><strong>Instruction Manual</strong></a></p>
+  <p>Document: <a target="_blank" href="https://ox4f5da2.github.io/plugin/guide/karl-cli.html"><strong>Instruction Manual</strong></a></p>
   <p>Author: <a target="_blank" href="https://github.com/ox4f5da2"><strong>Karl_fang</strong></a></p>
   <footer>Copyright © 2022 Karl_fang All Rights Reserved.</footer>
 </template>
