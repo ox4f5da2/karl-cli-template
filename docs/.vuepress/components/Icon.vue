@@ -1,6 +1,6 @@
 <template>
   <div class="icon">
-    <img :src="$withBase(`/images/common/${src}`)" alt="">
+    <img :src="$withBase(`/images/private/icon/${src}`)" alt="">
   </div>
 </template>
 

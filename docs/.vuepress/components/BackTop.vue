@@ -1,13 +1,19 @@
 <template>
   <div class="backTop" ref="backtop">
     <section :class="{ show: rocketFlag }" class="rocket" @click="rocket">
-      <img :src="$withBase('/images/common/rocket.svg')" alt="返回顶部" title="返回顶部">
+      <img :src="$withBase('/images/private/rocket.svg')" alt="返回顶部" title="返回顶部">
     </section>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    scrollStep: {
+      default: 50,
+      type: Number
+    }
+  },
   mounted() {
     this.interSectionObserver = new IntersectionObserver(this.handler, this.options);
     this.interSectionObserver.observe(this.$refs.backtop);
@@ -38,7 +44,7 @@ export default {
       }
     },
     step() {
-      const currTop = document.documentElement.scrollTop - 50;
+      const currTop = document.documentElement.scrollTop - this.scrollStep;
       window.scrollTo(0, currTop);
       currTop >= 0 ? window.requestAnimationFrame(this.step) : window.cancelAnimationFrame(this.step);
     },

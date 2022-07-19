@@ -2,7 +2,7 @@
   <div>
     <section :class="{ tip: true, phone: type === '手机', iPad: type === '平板', pc: type === '电脑', unknown: type === '未知设备' }">
       <div class="title">
-        <img :src="$withBase(`/images/common/${icon}.svg`)" 
+        <img :src="$withBase(`/images/private/icon/${icon}.svg`)" 
           :alt='`${icon}图标`' 
           :title="icon" />
         <span>提示</span>
@@ -12,7 +12,7 @@
         <span>您现在正在使用<strong>{{ type }}</strong>浏览文档!</span>
         <span v-if="['手机'].includes(type)">文档中的表格、图片等元素在手机端显示效果不佳, 为了您有更好的体验, 建议使用PC端浏览该页面! </span>
       </span>
-      <img class="close" :src="$withBase('/images/common/close.svg')" alt="关闭按钮" title="点击关闭" @click="closeTip" />
+      <img class="close" :src="$withBase('/images/private/close.svg')" alt="关闭按钮" title="点击关闭" @click="closeTip" />
     </section>
   </div>
 </template>

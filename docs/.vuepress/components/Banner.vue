@@ -1,11 +1,10 @@
 <template>
   <div>
     <section id="banner" ref="banner">
-      <img v-for="(item,index) in imgs" :key="item.id" 
-        :src="$withBase(item.src)" 
-        :style="{left: `${leftList[index]}px`}" 
-        :alt="item.title"
-        :title="item.title">
+      <Picture class="img" v-for="(item, index) in imgs" :key="item.id"  
+        :style="{left: `${leftList[index]}px`}"
+        :src="item.src" 
+        :title="item.title" />
       <div class="left" @click="preImg"></div>
       <div class="right" @click="nextImg" ref="rightBtn"></div>
       <div class="indicator">
@@ -21,20 +20,31 @@ export default {
     imgList: {
       default: [],
       type: Array
+    },
+    autoplay: {
+      default() {
+        return {
+          play: true,
+          interval: 5000
+        }
+      },
+      type: Object
     }
   },
   created() {
     this.imgs.forEach((item, index) => this.leftList[index] = index * 640);
   },
   mounted() {
-    const { rightBtn, banner } = this.$refs;
-    let timer = null;
-    function playImg() {
-      timer = setInterval(() => rightBtn.click(), 5000);
+    if (this.autoplay.play) {
+      const { rightBtn, banner } = this.$refs;
+      let timer = null;
+      const playImg = () => {
+        timer = setInterval(() => rightBtn.click(), this.autoplay.interval);
+      }
+      playImg();
+      banner.addEventListener("mouseenter", () => clearInterval(timer));
+      banner.addEventListener("mouseleave", playImg);
     }
-    playImg();
-    banner.addEventListener("mouseenter", () => clearInterval(timer));
-    banner.addEventListener("mouseleave", playImg);
   },
   data() {
     return {
@@ -101,6 +111,8 @@ export default {
 
 #banner {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   overflow: hidden;
   position: relative;
@@ -108,14 +120,20 @@ export default {
   margin-top: 20px;
 }
 
-#banner img {
-  box-sizing: border-box;
+#banner img[src$='svg'] {
+  width: 20%!important;
+  height: 20%!important;
+  padding: 5px 10px;
+  box-shadow: none;
+}
+
+#banner .img {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  margin-bottom: 0;
   border-radius: 5px;
-  transition: all .3s linear;
+  box-sizing: border-box;
+  min-width: 100%;
+  transition: left .3s linear;
 }
 
 #banner .left,

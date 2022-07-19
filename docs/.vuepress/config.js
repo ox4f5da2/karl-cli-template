@@ -4,12 +4,12 @@ module.exports = {
   base: "/", 
   head: [
     [
-      'link', { rel: 'icon', href: '/images/common/logo.png' }
+      'link', { rel: 'icon', href: '/images/private/logo.png' }
     ]
   ],
   themeConfig: {
     sidebarDepth: 2,
-    logo: '/images/common/logo.png', 
+    logo: '/images/private/logo.png', 
     nav: [
       { text: 'Home', link: '/' },
       {

@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/common/logo.png
+heroImage: /images/private/logo.png
 actionText: 起步 →
 actionLink: /模板介绍
 features:

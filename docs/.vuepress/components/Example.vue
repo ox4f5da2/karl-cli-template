@@ -1,7 +1,7 @@
 <template>
   <div id="showVideo">
     <span class="tip">点击观看示例视频</span>
-    <img class="video" @click="showVideo" :src="$withBase('/images/common/video.svg')" alt="示例视频" title="示例视频">
+    <img class="video" @click="showVideo" :src="$withBase('/images/private/video.svg')" alt="示例视频" title="示例视频">
     <section :class="{ myVideo:true, active: ifShow }">
       <video controls>
         <source :src="$withBase(videoSrc)">
