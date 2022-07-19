@@ -14,6 +14,7 @@ export default {
   },
   data() {
     return {
+      epsilon: 50,
       rocketFlag: false,
       interSectionObserver: null,
       options: { threshold: 0 }
@@ -21,14 +22,18 @@ export default {
   },
   methods: {
     handler(entries) {
-      const winHeight = window.screen.availHeight;
-      const { boundingClientRect: { bottom }, isIntersecting } = entries[0];
+      const {
+        intersectionRect: { bottom: bottom1 },
+        rootBounds: { height },
+        boundingClientRect: { bottom: bottom2 },
+        isIntersecting
+      } = entries[0];
       // 从屏幕下方出现
-      if (isIntersecting && bottom > 100 && bottom < winHeight) {
+      if (Math.abs(bottom1 - height) <= this.epsilon ) {
         this.rocketFlag = true;
       }
       // 从屏幕下方消失
-      else if (!isIntersecting && bottom > 0 && bottom >= winHeight - 100) {
+      else if (!isIntersecting && bottom2 > 0 && Math.abs(bottom1 - 0) <= this.epsilon) {
         this.rocketFlag = false;
       }
     },
@@ -57,7 +62,7 @@ export default {
   cursor: pointer;
   z-index: 98;
   opacity: 0;
-  transition: all .5s ease-out;
+  transition: all .2s ease-out;
 }
 
 .rocket.show {

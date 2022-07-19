@@ -83,6 +83,7 @@ export default {
 }
 
 .tip {
+  box-sizing: border-box;
   display: inline-block;
   width: 100%;
   padding: 8px 15px;

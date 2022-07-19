@@ -84,9 +84,22 @@ export default {
   --arrow-hover-color: orange;
 }
 
+/* 手机 */
+@media (max-width: 768px) {
+  #banner {
+    width: 90vw;
+    height: 56vw;
+  }
+}
+
+@media (min-width: 768px) {
+  #banner {
+    width: 640px;
+    height: 400px;
+  }
+}
+
 #banner {
-  width: 640px;
-  height: 400px;
   display: flex;
   flex-direction: row;
   overflow: hidden;
